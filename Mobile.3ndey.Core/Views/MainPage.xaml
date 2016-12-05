@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile._3ndey.Core.Views.MainPage"
+             xmlns:res="clr-namespace:Mobile._3ndey.Core.Resources;assembly=Mobile._3ndey.Core">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Label">
+        <Setter Property="Font">
+          <OnPlatform x:TypeArguments="Font">
+            <OnPlatform.iOS>12</OnPlatform.iOS>
+            <OnPlatform.Android>12</OnPlatform.Android>
+            <OnPlatform.WinPhone>18</OnPlatform.WinPhone>
+          </OnPlatform>
+        </Setter>
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Label Grid.Row="0" Text="Get Expert help from local professionals" VerticalOptions="Start" HorizontalOptions="Center" />
+    <Grid Grid.Row="1">
+      <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Start">
+        <Button BackgroundColor="Silver" VerticalOptions="Start" HorizontalOptions="Center" Text="Start Hiring" Command="{Binding SignInCommand}"></Button>
+        <Button BackgroundColor="Silver" VerticalOptions="Start" HorizontalOptions="Center" Text="Start Business" Command="{Binding SignInCommand}"></Button>
+        <Button BackgroundColor="Silver" VerticalOptions="Start" HorizontalOptions="Center" Text="SIGN IN" Command="{Binding SignInCommand}"></Button>
+      </StackLayout>
+    </Grid>
+  </Grid>
+</ContentPage>
